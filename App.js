@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+ import { View, Text } from 'react-native';
+ import { NavigationContainer } from '@react-navigation/native';
+ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+ import HomeScreen from './screens/home';
+ import NotasScreen from './screens/notas';
+ import DataScreen from './screens/datas';
+ import ChatScreen from './screens/chat';
+ import AjusteScreen from './screens/ajustes';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+ const Tab = createBottomTabNavigator();
+
+ function App() {
+     return (
+     <NavigationContainer>
+         <Tab.Navigator>
+         <Tab.Screen name='Notas' component={NotasScreen} />
+         <Tab.Screen name='Calendario' component={DataScreen} />
+         <Tab.Screen name='Home' component={HomeScreen} />
+         <Tab.Screen name='Chat' component={ChatScreen} />
+         <Tab.Screen name='Ajustes' component={AjusteScreen} />
+         </Tab.Navigator>
+     </NavigationContainer>
+     );
+ }
+
+ export default App;
