@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-function AjusteScreen() {
+function RecadoScreen() {
   return (
     <SafeAreaView style={styles.container}>
       {/* fundo verde */}
@@ -16,7 +16,7 @@ function AjusteScreen() {
       <View style={styles.fundoAzul}>
         <View style={styles.row}>
           <Ionicons name="bookmark" size={20} color="#fff" />
-          <Text style={styles.textoTitulo}>Ajustes</Text>
+          <Text style={styles.textoTitulo}>Recados</Text>
         </View>
       </View>
     </SafeAreaView>
@@ -83,4 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AjusteScreen;
+export default RecadoScreen;
