@@ -53,7 +53,7 @@ function App() {
             position: 'absolute',
             borderTopLeftRadius: 20,
             borderTopRightRadius: 20,
-            backgroundColor: '#f9a825',
+            backgroundColor: '#17243fff',
             height: 70,
             paddingBottom: 8,
             paddingTop: 8,
